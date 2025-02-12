@@ -14,3 +14,17 @@ class Conta:
             print('O saldo nao pode ser negativo')
         else:
             self._saldo = saldo
+
+    def saque(self, valor):
+        if (self.saldo>=valor):
+            self.saldo-=valor
+            print('Saque realizado com sucesso')
+        else:
+            print('Saldo insuficiente')
+
+
+    def desposita(self, valor):
+        self.saldo+=valor
+
+    def extrato(self):
+        print('Cliente: ',self._titular, ' Saldo Atual: ',self._saldo)
